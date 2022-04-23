@@ -25,7 +25,8 @@ const choices = {
   lizard: { name: 'Lizard', defeats: ['paper', 'spock'] },
   spock: { name: 'Spock', defeats: ['scissors', 'rock'] },
 };
-
+let playerScoreNumber = 0;
+let computerScoreNumber = 0;
 let computerChoice = ''
 
 // Reset all 'selected' icons
@@ -47,10 +48,8 @@ function computerRandomChoice(){
   }else{
     computerChoice = 'spock'
   }
-  
 }
 
-// A
 function displayComputerChoice() {
   // Add 'selected' styling & computer Choice
   switch (computerChoice) {
@@ -79,16 +78,36 @@ function displayComputerChoice() {
   }
 }
 
+// Check result, increase scores. update resultText
+function updateScore(playerChoice){
+  if(playerChoice === computerChoice){
+    resultText.textContent = "It's a tie"
+  }else {
+    const choice = choices[playerChoice]
+    console.log(choice.defeats.indexOf(computerChoice));
+    if (choice.defeats.indexOf(computerChoice) >-1){
+      resultText.textContent = "You Won!"
+      playerScoreNumber++;
+      playerScoreEl.textContent = playerScoreNumber
+    }else{
+      resultText.textContent = "You Lost!"
+      computerScoreNumber++;
+      computerScoreEl.textContent = computerScoreNumber
+    }
+  }
+}
+
 // Call functions to process turn
-function checkResult(){
+function checkResult(playerChoice){
   resetSelected();
   computerRandomChoice();
   displayComputerChoice();
+  updateScore(playerChoice);
 }
 
 // Passing player selection value and styling icons
 function select(playerChoice) {
-  checkResult();
+  checkResult(playerChoice);
   // Add 'selected' styling & playerChoice
   switch (playerChoice) {
     case 'rock':
