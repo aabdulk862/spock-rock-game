@@ -16,7 +16,7 @@ body {
 
 .game-container{
   width: 530px;
-  height: 600px;
+  height: 700px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5) ;
@@ -41,7 +41,9 @@ h1 {
 .player-container {
   margin: 50px;
 }
-
+.rules{
+  margin: 10px;
+}
 h2 {
   margin-bottom: 20px;
 }
@@ -92,11 +94,12 @@ h2 {
   margin-top: 20px;
 }
 
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .game-container {
     width: 95%;
-    height: 580px;
+    height: 750px;
   }
 
   h1 {
@@ -120,7 +123,7 @@ h2 {
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
   .game-container {
-    height: 550px;
+    height: 700px;
   }
 
   h1 {
