@@ -1,1 +1,7 @@
  "Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors."
+
+  <div class="rules">
+            <p>Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard</p>
+            <p>Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard</p>
+            <p>Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock, and as it always has, Rock crushes Scissors.</p>
+        </div>
